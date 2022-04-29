@@ -1,0 +1,748 @@
+{
+	"info": {
+		"_postman_id": "f05c2b07-0a12-4d8f-9a54-2a6fb8f835e0",
+		"name": "phase3-final-project-sporty-shoes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customer-getAllProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/customer/getAllProducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"customer",
+						"getAllProducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer-signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " \r\n {\r\n \"userId\": \"ritankar@yahoo.com\",\r\n    \"password\" :\"qwerty@123\",\r\n    \"name\":\"Ritankar\",\r\n    \"type\":\"customer\"\r\n\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/customer/signUp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"customer",
+						"signUp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer-SignIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"userId\": \"ritankar@gmail.com\",\r\n    \"password\" :\"qwerty@123456\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/customer/signIn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"customer",
+						"signIn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customer-Signout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/customer/signOut",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"customer",
+						"signOut"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customer-getbyProductName",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"productName\": \"MEn \"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/customer/findProductByName",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"customer",
+						"findProductByName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customer-getProductById",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"productNumber\": \"101\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/customer/findProductById",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"customer",
+						"findProductById"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customer-getUserDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/customer/getUserDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"customer",
+						"getUserDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customer-editProfile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n \r\n    \"password\" :\"qwerty@12345\",\r\n    \"name\":\"Ritankar\"\r\n    \r\n\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/customer/editUserDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"customer",
+						"editUserDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customer-buyProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"productId\": 1,\r\n        \"productNumber\": \"T-kids-101\",\r\n        \"productName\": \"Kids Walker\",\r\n        \"productPrice\": 1320.0,\r\n        \"productQuantity\": 7,\r\n        \"productVendor\": \"Ritesh Enterprise\",\r\n        \"productCategory\": \"Kids\",\r\n        \"orders\":[]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/customer/buyProduct?quantity=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"customer",
+						"buyProduct"
+					],
+					"query": [
+						{
+							"key": "quantity",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customer-userPurchaseHistory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/customer/purchaseHistory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"customer",
+						"purchaseHistory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-signIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"userId\": \"admin@gmail.com\",\r\n    \"password\" :\"admin@1234\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/admin/signIn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"admin",
+						"signIn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customer-getAllProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/customer/getAllProducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"customer",
+						"getAllProducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-signOut",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/admin/signOut",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"admin",
+						"signOut"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-changePassword",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"password\" :\"admin@1234\",\r\n    \"name\" : \"Mahesh Singh\"\r\n    \r\n    \r\n\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/admin/editAdminPassword",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"admin",
+						"editAdminPassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-getAllUSers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/admin/getAllUsers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"admin",
+						"getAllUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-getUsersByName",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\": \"Rit \"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/admin/findUsersByName",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"admin",
+						"findUsersByName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-findUsersById",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"userId\": \"ritankar@yahoo.com \"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/admin/findUsersById",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"admin",
+						"findUsersById"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-getAllPRoducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/admin/getAllProducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"admin",
+						"getAllProducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-getProductById",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"productNumber\": \"101\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/admin/findProductById",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"admin",
+						"findProductById"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-getOrdersByProductId",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\"productId\":2\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/admin/findOrdersByProductId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"admin",
+						"findOrdersByProductId"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-getOrdersByUserId",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"userId\" : \"rit \"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/admin/findOrdersByUserId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"admin",
+						"findOrdersByUserId"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-addProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "      {    \r\n        \"productNumber\": \"T-women-790\",\r\n        \"productName\": \"Women Sandals\",\r\n        \"productPrice\": 2999,\r\n        \"productQuantity\": 21,\r\n        \"productVendor\": \"Deshmukh Enterprise\",\r\n        \"productCategory\": \"Women\"   \r\n\r\n      }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/admin/addProduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"admin",
+						"addProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-updateProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {     \"productId\":4,\r\n        \"productNumber\": \"T-women-790\",\r\n        \"productName\": \"Women Sandals\",\r\n        \"productPrice\": 1999,\r\n        \"productQuantity\": 21,\r\n        \"productVendor\": \"Deshmukh Enterprise\",\r\n        \"productCategory\": \"Women\"   \r\n\r\n      }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/admin/updateProduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"admin",
+						"updateProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-deleteProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {     \"productId\":4,\r\n        \"productNumber\": \"T-women-790\",\r\n        \"productName\": \"Women Sandals\",\r\n        \"productPrice\": 1999,\r\n        \"productQuantity\": 21,\r\n        \"productVendor\": \"Deshmukh Enterprise\",\r\n        \"productCategory\": \"Women\"   \r\n\r\n      }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/admin/deleteProduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"admin",
+						"deleteProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-sortByOrderDateAsc",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/admin/sortByOrderDateAsc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"admin",
+						"sortByOrderDateAsc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-sortByOrderDateDesc",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/admin/sortByOrderDateDesc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"admin",
+						"sortByOrderDateDesc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-sortByOrderIdAsc",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/admin/sortByOrderIdAsc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"admin",
+						"sortByOrderIdAsc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin- sortByOrderIdDesc",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/admin/sortByOrderIdDesc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"admin",
+						"sortByOrderIdDesc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-deleteOrderById",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"orderId\": 11\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/admin/deleteOrderById",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"admin",
+						"deleteOrderById"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
